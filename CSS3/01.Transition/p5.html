@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            padding: 4%;
+            background-color: lightgray;
+            height: 100vh;
+            display: flex;
+            align-items: end;
+        }
+        .bike{
+            width: 250px;
+            animation-name: wheeling;
+            animation-duration: 4s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: infinite;
+            /* animation-direction: alternate; */
+        }
+
+        @keyframes wheeling{
+            0%{
+                transform: translateX(-100px);
+            }
+            50%{
+                transform: translateX(400px) rotate(-45deg);
+            }
+            100%{
+                transform: translateX(950px) rotate(10deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <img src="https://file.aiquickdraw.com/imgcompressed/img/compressed_1eb2261474c61f82d8e7601cf9ab448d.webp" alt="" class="bike">
+    </section>
+</body>
+</html>

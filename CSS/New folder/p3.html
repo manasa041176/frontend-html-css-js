@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>District Wise Bar Graph</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 50px;
+    background-color: #fff;
+  }
+
+  h1 {
+    font-size: 26px;
+    margin-bottom: 40px;
+  }
+
+  
+  .chart {
+    width: 90%;
+    max-width: 900px;
+    height: 400px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    border-left: 2px solid #000;
+    border-bottom: 2px solid #000;
+    position: relative;
+    background: repeating-linear-gradient(
+      to top,
+      #f5f5f5 0,
+      #f5f5f5 1px,
+      white 80px
+    );
+  }
+
+  .chart::before {
+    content: "0%";
+    position: absolute;
+    bottom: -25px;
+    left: -30px;
+    font-weight: bold;
+  }
+
+  .chart::after {
+    content: "100%";
+    position: absolute;
+    top: -25px;
+    left: -40px;
+    font-weight: bold;
+  }
+
+ 
+  .bar-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bar {
+    width: 80px;
+    background-color: #e74c3c;  
+    border: 2px solid #c0392b;
+    border-radius: 5px 5px 0 0;
+    transition: 0.3s;
+  }
+
+ 
+  .selected {
+    background-color: #ff0000;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+    transform: scale(1.05);
+  }
+
+ 
+  .bar1 { height: 80%; }
+  .bar2 { height: 55%; }
+  .bar3 { height: 70%; }
+  .bar4 { height: 40%; }
+  .bar5 { height: 65%; }
+  .bar6 { height: 50%; }
+  .bar7 { height: 30%; }
+  .bar8 { height: 60%; }
+ 
+ 
+
+  
+  .label {
+    transform: rotate(-45deg);
+    transform-origin: top right;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #000;
+  }
+</style>
+</head>
+<body>
+
+  <h1>District Wise Bar Graph</h1>
+
+  <div class="chart">
+    <div class="bar-group">
+      <div class="bar bar1"></div>
+      <div class="label">Bangalore</div>
+    </div>
+    <div class="bar-group">
+      <div class="bar bar2"></div>
+      <div class="label">Mysore</div>
+    </div>
+    <div class="bar-group">
+      <div class="bar bar3 selected"></div>
+      <div class="label">Tumkur</div>
+    </div>
+    <div class="bar-group">
+      <div class="bar bar4"></div>
+      <div class="label">Mandya</div>
+    </div>
+    <div class="bar-group">
+      <div class="bar bar5"></div>
+      <div class="label">Hassan</div>
+    </div>
+    <div class="bar-group">
+      <div class="bar bar6"></div>
+      <div class="label">Kolar</div>
+    </div>
+    <div class="bar-group">
+      <div class="bar bar7"></div>
+      <div class="label">Chikmagalur</div>
+    </div>
+    <div class="bar-group">
+      <div class="bar bar8"></div>
+      <div class="label">Udupi</div>
+    </div>
+  </div>
+
+</body>
+</html>
+
+

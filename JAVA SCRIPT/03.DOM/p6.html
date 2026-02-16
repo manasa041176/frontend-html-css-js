@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>textContent, createElement, appendChild </h1>
+
+    <button onclick="handler()">click me</button>
+    <div id="blk"></div>
+
+    <script>
+         var blkEl = document.getElementById("blk");
+
+         function handler() {
+             var secEl = document.createElement("section")
+             var h1El = document.createElement("h1")
+             var imgEl = document.createElement("img")
+
+             h1El.textContent = "John  Mathew";
+             imgEl.src = "https://picsum.photos/id/566/400/400"
+
+             secEl.appendChild(h1El);
+             secEl.appendChild(imgEl)
+
+             blkEl.appendChild(secEl)
+         }
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" class="css">
+</head>
+<body>
+    <section class="container">
+        <div class="title">
+            <h1>validating name</h1>
+
+        </div>
+
+        <div class="box">
+            <form method="post" autocomplete="off" onsubmit="submitHandler(event)">
+                <div calss="form-group">
+                    <label for="email">your email</label>
+                    <input type="text" name="email" id="email" class="form-input">
+                    <span id="emailStatus"></span>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn">send</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script>
+    let nameEl = document.getElementById("email")
+     let status = document.getElementById("emailStatus")
+
+     function submithandler(e){
+        e.preventDefoult();
+        let email = emailEl.value;
+        let emailReg = /^[a-zA-Z0-9_-\S]+@[a-zA-Z-]+?\.[a-zA-Z]{2,10}$/;
+
+        if(!email){
+            emStatus.innertext = "email is required";
+            emStatus.style.color = "red";
+
+        } else if (!nameReg.test(name)){
+            emStratus.innertext = "invalid email format";
+            emStatus.style.color = "red";
+
+        } else {
+            emStatus.innertext = "valid email";
+            emStatus.style.color = "green";
+        }
+
+        }
+     
+    </script>
+</body>
+</html>
+        

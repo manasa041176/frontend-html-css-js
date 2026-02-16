@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            width: 50px;
+            height: 50px;
+            appearance: none;
+            background: url(https://cliply.co/wp-content/uploads/2021/03/392103390_SAD_EMOJI_400px.gif) no-repeat ;
+            background-size: cover;
+        }
+        input:checked{
+            /* outline: 3px solid red !important; */
+            background: url(https://i.pinimg.com/originals/c1/e9/51/c1e95172d8c115d66148cb9ad68c1c74.gif) no-repeat ;
+            background-size: cover;
+
+        }
+
+          input:default{
+            /* outline: 3px solid red !important; */
+            background: url(https://i.pinimg.com/originals/c4/07/04/c4070448ce8174b2b3e121081ddbbee5.gif) no-repeat ;
+            background-size: cover;
+
+        }
+        .check{
+            display: flex;
+            align-items: center;
+            padding: 1px 20px;
+            box-shadow: 0px 2px 10px #ccc;
+            border-radius: 100px;
+            width: fit-content;
+            background-color: white;
+        }
+        .check label{
+            font-size: 1.2rem;
+            font-family: sans-serif;
+        }
+
+        center{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            background-color: rgb(229, 229, 229);
+        }
+        body{
+            padding: 5%;
+        }
+    </style>
+</head>
+<body>
+    <label for="">Select intrested languages</label>
+    <center>
+    <div for="" class="check">
+        <input type="checkbox" checked>
+        <label for="">Kannada</label>
+    </div>
+
+     <div for="" class="check">
+        <input type="checkbox">
+        <label for="">English</label>
+    </div>
+
+     <div for="" class="check">
+        <input type="checkbox">
+        <label for="">Hindi</label>
+    </div>
+
+     <div for="" class="check">
+        <input type="checkbox">
+        <label for="">Marati</label>
+    </div>
+
+     <div for="" class="check">
+        <input type="checkbox">
+        <label for="">Telugu</label>
+    </div>
+
+     <div for="" class="check">
+        <input type="checkbox">
+        <label for="">Tamil</label>
+    </div>
+   
+
+    </center>
+</body>
+</html>

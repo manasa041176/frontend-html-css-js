@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Dom siblings</h1>
+
+     <div>
+        <p>sample para 1</p>
+        <p>sample para 2</p>
+        <p>sample para 3</p>
+        <p>sample para 4</p>
+        <p class="fifth">sample para 5</p>
+    </div>
+
+    <script>
+        let first = document.querySelector("p")
+        console.log(first)
+        // parentElement
+        console.log(first.parentElement)
+        console.log(first.parentElement.parentElement)
+        console.log(first.parentElement.parentElement.parentElement)
+        console.log(first.parentElement.parentElement.parentElement.parentElement)
+
+        console.log(`\n`)
+        // child element
+        let blk = document.querySelector("div")
+        console.log(blk)
+        console.log(blk.children)
+        console.log(blk.children[3])
+
+        console.log(`\n`)
+        // next element sibling
+        console.log(first) // para-1
+        console.log(first.nextElementSibling)
+        console.log(first.nextElementSibling.nextElementSibling)
+        console.log(first.nextElementSibling.nextElementSibling.nextElementSibling)
+        console.log(first.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling) // para-5
+
+        console.log(`\n`)
+        let fifth = document.querySelector(".fifth")
+        console.log(fifth)
+        console.log(fifth.previousElementSibling)
+        console.log(fifth.previousElementSibling.previousElementSibling)
+        console.log(fifth.previousElementSibling.previousElementSibling.previousElementSibling)
+        console.log(fifth.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling)
+
+        console.log(`\n`)
+        console.log(blk.firstElementChild)
+        console.log(blk.lastElementChild)
+    </script>
+</body>
+</html>

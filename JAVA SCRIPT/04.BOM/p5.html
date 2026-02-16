@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>close window</h1>
+    <button onclick="handler1()">Open Window</button>
+    <button onclick="handler2()">close Window</button>
+
+    <script>
+        
+        var x;
+
+        function handler1() {
+            
+          //  open("https://google.com"); // open in new tab
+           x = window.open("https://google.com","title ", "width=400,height=400"); // open in window
+        }
+
+        function handler2() {
+            x.close();
+        }
+    </script>
+</body>
+</html>

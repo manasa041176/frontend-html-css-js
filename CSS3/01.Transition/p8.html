@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>heart beating</title>
+<style>
+     .container{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: red;
+             position: relative;
+            position: absolute;
+            left:10px;
+            max-width: 100%;
+            
+         }
+    
+  :root{
+      --heart-size: 120px;       /* change this to scale the heart */
+    --beat-speed: 1s;         /* change this to speed up / slow down */
+    --heart-color: #b11310;
+
+  }
+   
+
+  body{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:100vh;
+    margin:0;
+    background:#cf0606;
+    font-family:system-ui,Segoe UI,Roboto,Arial;
+    left:50%;
+  }
+
+
+
+ 
+ 
+  .heart{
+    position:relative;
+    width:var(--heart-size);
+    height:var(--heart-size);
+    transform:rotate(-45deg);
+    transform-origin:50% 50%;
+    animation: heartbeat var(--beat-speed) infinite cubic-bezier(.2,.9,.4,1);
+    filter: drop-shadow(0 8px 18px rgba(0,0,0,.5));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  
+
+  .heart::before{
+    top:-50%;
+    left:0;
+  }
+  .heart::after{
+    left:50%;
+    top:0;
+  }
+
+ 
+
+  @keyframes heartbeat {
+    0%   { transform: rotate(-45deg) scale(1); }
+    10%  { transform: rotate(-45deg) scale(1.15); }
+    20%  { transform: rotate(-45deg) scale(0.95); }
+    30%  { transform: rotate(-45deg) scale(1.15); }
+    45%  { transform: rotate(-45deg) scale(1); }
+    100% { transform: rotate(-45deg) scale(1); }
+  }
+
+ 
+ 
+ 
+  @media (max-width:420px){
+    :root { --heart-size: 100px; }
+  }
+</style>
+</head>
+<body>
+  
+ 
+
+      <section class="heart">
+      
+    <img src="https://static.vecteezy.com/system/resources/thumbnails/036/181/219/small_2x/ai-generated-real-human-heart-on-transparent-background-png.png">
+    
+  <div style="position:relative; display:flex; align-items:center; justify-content:center;">
+ 
+    <div class="heart" role="img" aria-label="Beating heart"></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+        .hero {
+            padding: 4%;
+            text-align: center;
+            background-color: lightcoral;
+
+
+        }
+          .hero h1{
+            margin-bottom: 20px;
+            font-size: 5rem;
+
+          }
+          .hero button{
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            border: none;
+            margin-top: 20px;
+            cursor: pointer;
+          }
+          button:hover{
+            opacity: 0.8;
+
+          }
+        @media(max-width:600px){
+            .hero{
+                background-color: black;
+                color: aliceblue;
+
+            }
+            .hero h1{
+                font-size: 2.5rem;
+            }
+            .hero button{
+                background-color: white;
+                color: black;
+                width: 80%;
+            }
+
+        }
+        @media (max-width:400px){
+            .hero h1{
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <h1>single background color</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus debitis in quod. Eligendi harum accusamus quisquam nostrum voluptas voluptatem, ab inventore dolores sint enim dignissimos in. Expedita corporis dolore necessitatibus.</p>
+        <button>click</button>
+    </section>
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>CSS Car</title>
+<style>
+  :root{
+    --car-width: 600px;
+    --car-height: calc(var(--car-width) * 0.35);
+    --body-color: #2b85ff;
+    --accent: #0f4ea8;
+    --glass: rgba(255,255,255,0.85);
+    --wheel: #222;
+    --rim: #bbb;
+  }
+
+  *{box-sizing:border-box}
+  body{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:100vh;
+    margin:0;
+    background: linear-gradient(180deg,#bfe6ff 0%, #eaf6ff 100%);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  }
+
+  .scene{
+    width: min(90vw, var(--car-width));
+    transform-origin:center;
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float{
+    0%{ transform: translateY(0) }
+    50%{ transform: translateY(-8px) }
+    100%{ transform: translateY(0) }
+  }
+
+  /* Car wrapper */
+  .car{
+    position: relative;
+    width:100%;
+    height: calc(var(--car-height) * 1.1);
+    margin: 20px auto;
+    filter: drop-shadow(0 8px 18px rgba(10,30,60,0.12));
+  }
+
+  /* Main body */
+  .car .body{
+    position:absolute;
+    left:5%;
+    right:5%;
+    bottom:18%;
+    height:60%;
+    background: linear-gradient(180deg, var(--body-color), var(--accent));
+    border-radius: 28px 28px 18px 18px;
+    box-shadow: inset 0 -6px 10px rgba(0,0,0,0.08);
+  }
+
+  /* Roof */
+  .car .roof{
+    position:absolute;
+    left:18%;
+    right:24%;
+    bottom:54%;
+    height:36%;
+    background: linear-gradient(180deg,#2f93ff,#0f62b6);
+    border-radius: 16px 16px 8px 8px;
+    transform: skewX(-6deg);
+    box-shadow: inset 0 -4px 8px rgba(0,0,0,0.06);
+  }
+
+  /* Windows (two layered panes) */
+  .car .window{
+    position:absolute;
+    left:22%;
+    right:28%;
+    bottom:56%;
+    height:30%;
+    border-radius:10px 10px 6px 6px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.9));
+    clip-path: polygon(0 0, 98% 0, 90% 100%, 0% 100%);
+    opacity:0.95;
+  }
+  .car .window::after{
+    content:"";
+    position:absolute;
+    inset:8% 12% 12% 8%;
+    background: linear-gradient(180deg, rgba(255,255,255,0.45), rgba(255,255,255,0.15));
+    border-radius:6px;
+    transform: translateY(-2px);
+  }
+
+  /* Head & tail lights */
+  .car .headlight{
+    position:absolute;
+    width:8%;
+    height:12%;
+    right:2%;
+    bottom:46%;
+    background: linear-gradient(90deg,#fff7c2,#ffd34d 60%, #ffb84d);
+    border-radius:6px;
+    box-shadow: 0 0 18px rgba(255,200,50,0.35);
+    transform: skewX(-6deg);
+  }
+  .car .taillight{
+    position:absolute;
+    width:6%;
+    height:10%;
+    left:2%;
+    bottom:46%;
+    background: linear-gradient(90deg,#ff8a8a,#ff3b3b);
+    border-radius:4px;
+    transform: skewX(-6deg);
+  }
+
+  /* Door line & trim */
+  .car .trim{
+    position:absolute;
+    left:10%;
+    right:10%;
+    bottom:40%;
+    height:0;
+    border-bottom: 3px solid rgba(0,0,0,0.06);
+    transform: skewX(-6deg);
+  }
+
+  /* Wheels */
+  .wheel{
+    position:absolute;
+    bottom:4%;
+    width:18%;
+    aspect-ratio:1/1;
+    border-radius:50%;
+    background: radial-gradient(circle at 30% 30%, #444 0 8%, #111 9% 38%, #0b0b0b 39% 100%);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow: inset 0 -6px 12px rgba(0,0,0,0.3);
+  }
+  .wheel .rim{
+    width:52%;
+    height:52%;
+    border-radius:50%;
+    background: linear-gradient(180deg,#ddd,#999);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transform-origin:center;
+    animation: spin 1.2s linear infinite;
+  }
+  @keyframes spin{
+    from{ transform: rotate(0deg) }
+    to{ transform: rotate(360deg) }
+  }
+
+  /* wheel positions */
+  .wheel.left{ left:12% }
+  .wheel.right{ right:12% }
+
+  /* small details: antenna */
+  .antenna{
+    position:absolute;
+    left:72%;
+    bottom:82%;
+    width:2px;
+    height:18%;
+    background:#111;
+    transform: rotate(-8deg);
+  }
+  .antenna::after{
+    content:"";
+    position:absolute;
+    right:-2px;
+    top:-10px;
+    width:10px;
+    height:10px;
+    background:#ddd;
+    border-radius:50%;
+    box-shadow: inset 0 -2px 0 rgba(0,0,0,0.2);
+  }
+
+  /* Make car scale nicely on small screens */
+  @media (max-width:420px){
+    :root{ --car-width: 320px }
+  }
+
+  /* Extra — hover effect to "rev" the wheels a bit */
+  .scene:hover .wheel .rim{
+    animation-duration: 0.6s;
+  }
+</style>
+</head>
+<body>
+
+  <div class="scene" role="img" aria-label="Illustration of a car">
+    <div class="car">
+      <div class="body"></div>
+      <div class="roof"></div>
+      <div class="window" aria-hidden="true"></div>
+      <div class="headlight" aria-hidden="true"></div>
+      <div class="taillight" aria-hidden="true"></div>
+      <div class="trim" aria-hidden="true"></div>
+
+      <div class="wheel left" aria-hidden="true">
+        <div class="rim"></div>
+      </div>
+      <div class="wheel right" aria-hidden="true">
+        <div class="rim"></div>
+      </div>
+
+      <div class="antenna" aria-hidden="true"></div>
+    </div>
+  </div>
+
+</body>
+</html>
+

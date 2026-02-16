@@ -1,0 +1,176 @@
+<html>
+    <head>
+        <title>HTML FORM EXAMPLES</title>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            .container{
+                min-height: 100vh;
+                /* background-color: lightblue; */
+                background: linear-gradient(65deg, rgb(237, 251, 255), lightblue);
+
+                display: flex;
+                justify-content: space-between;
+                align-items: stretch;
+                
+                padding: 4%;
+            
+            }
+            .left{
+                height: 100vh;
+                background: linear-gradient(65deg, rgb(237, 251, 255), lightblue);
+                flex: 1;
+                padding: 4%;
+                border-radius: 1px;
+            }
+            .right{
+                
+                background-color: white;
+                width: 450px;
+                padding:30px;
+                border-radius: 10px;
+                display: flex;
+                
+                justify-content: space-between;
+                
+                
+                
+            }
+            p{
+                line-height: 1.5;
+            }
+
+            ul{
+                list-style-position: inside;
+                line-height: 2;
+                margin-bottom: 20px;
+            }
+            ul li::marker{
+                content:"✔";
+            }
+            .btn-submit{
+                background-color:#007bff;
+                color:white;
+                font-weight: bold;
+                width:100%;
+                border:none;
+                outline:none;
+                padding:5px;
+                border-radius: 5px;
+                margin-top: 10px;
+            }
+            .btn-submit:hover{
+                background-color: #0056b3;
+            }
+            form{
+                padding:7px;
+            }
+            input{
+                border:none;
+                padding:7px;
+                outline:none;
+                width:100%;
+
+
+            }
+            select{
+                border:none;
+            }
+            fieldset{
+                margin-top: 10px;
+                width:100%;
+                border-radius: 5px;
+                
+                
+            }
+            p{
+                margin-top: 10px;
+            }
+            textarea{
+                border:none;
+                outline:none;
+                width:100%;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="left">
+                <h1>Contact our sales team</h1>
+                <p>Build better processes, faster, with Airtable. Backed by advanced data security, no-code capabilities, and embedded Al, Airtable can help your team speed up important tasks and drive better results.</p>
+                <div class="points">
+                 <ul>
+                    <li>Vimeo connected 15+ workflows and cut tool costs</li>
+                    <li>JetBlue accelerated roadmap prioritization from weeks, to minutes</li>
+                    <li>DropBox drove top-line growth, increasing website traffic by 30%</li>
+                </ul>
+                </div>
+
+                <small>Trusted by 50% of the Fortune 1000</small>
+                <p>For technical or product support, please visit our <a href="#">Help Center</a></p>
+            </div>
+            <div class="right">
+                <form>
+                    <h4>Contact our sales team</h4>
+                    <div style="display:flex; gap:15px;">
+                    <fieldset style="flex:1;">
+                        <label for="name"><span style="color: red">*</span>First Name</label>
+                        <input type="text" id="name" name="name" required >
+                    </fieldset>
+                    <fieldset style="flex:1;">
+                        <label for="name"><span style="color: red">*</span>Last Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </fieldset>
+                    </div>
+
+                    <fieldset>
+                        <label for="email" style="display: block;"><span style="color: red">*</span>Work Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </fieldset>
+                     <fieldset>
+                        <label for="phone" style="display: block;"><span style="color: red">*</span>Phone Number</label>
+                        <input type="tel" id="phone" name="phone"  placeholder="🏴+1">
+                    </fieldset>
+                    <div style="display: flex; gap:15px;">
+                    <fieldset style="flex:1;">
+                        <label for="text"><span style="color: red">*</span>Company Name</label>
+                        <input type="text" id="text" name="text" required>
+                    </fieldset>
+                    <fieldset style="flex:1;">
+                        <label for="job"><span style="color: red">*</span>Job Title</label>
+                        <input type="text" id="job" name="job" required>
+                    </fieldset>
+
+                    </div>
+                    <fieldset>
+                        <label for="country" style="display: block;"><span style="color: red">*</span>Country</label>
+                        <input type="text" id="country" name="country" required>
+                    </fieldset>
+                    <fieldset>
+                        <label for="hi" style="display:block;"><span style="color:red">*</span>How can our team help?</label>
+                        <select name="hi" id="hi">
+                            <option value="" disabled selected hidden>select the reason</option>
+                            <option>General Inquiry</option>
+                            <option>Product Deme</option>
+                            <option>Pricing Information</option>
+                        </select>
+                    </fieldset>
+                    <fieldset>
+                    <label for="text" style="display: block;"><span style="color:red">*</span>How are you looking to use Airtable?</label>
+                    <textarea rows="3" id="text" ></textarea>
+                    </fieldset>
+
+                    <p>By clicking "submit", I acknowledge and understand that my personal information may be collected and used as described in <u>Airtable's Privacy Policy.</u></p>
+                    <button type="submit" class="btn btn-submit">Submit</button>
+                    
+
+                </form>
+
+            </div>
+        </div>
+    </body>
+</html>

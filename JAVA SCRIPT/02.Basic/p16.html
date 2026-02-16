@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>condition statements</h1>
+    </center>
+    <hr>
+    <ol>
+        <i>Simple if condition</i>
+        <li>If Else statement</li>
+        <li>Else if statement</li>
+        <li>Switch case</li>
+    </ol>
+
+    <hr>
+
+    <h1>Simple if statement and diffence between == and ===</h1>
+    <hr>
+
+    <script>
+        //example 1
+        if(10==10){
+            //this block will executes when the condition if returned true
+            console.log("Example1: yes condition is the true 10 is equal 10");
+            
+        }
+
+
+        //example 2
+          if(10===10){
+            //this block will executes when the condition if returned true
+            console.log("Example2: yes condition is the true 10 is equal 10");
+            
+        }
+
+
+        //note1: if we are using == to compare it checks only the values (if values is same == returns true)
+        //note2: if we are using === to compare it checks both values and that values datatypes (if values is same and datatypes if same then only === returns true)
+
+
+
+
+        //example 3
+        if(10 == "10"){
+              //this block will executes when the condition if returned true
+            console.log("Example3: yes condition is the true 10 is equal 10");
+            
+        }
+
+
+
+        //example 4
+        if(10 === "10"){
+              //this block will executes when the condition if returned true
+            console.log("Example4: yes condition is the true 10 is equal 10");
+            
+        }
+
+        //example4 will won't executes becuase here value are same 10 and "10" are same but 10 is a number and "10" is a string so datatypes and not same
+        //values => 10 == "10" = true
+        //datatypes => number (10) == string ("10") = false
+        //finally => true and false = false 
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>document.getElementById(id).innerText (string) </h1>
+
+    <button id="btn" onclick="handler()">Click me</button>
+
+    <div id="blk"></div>
+    <hr>
+
+    <h1 id="txt"></h1>
+
+    <script>
+        var blkEl = document.getElementById("blk")
+        var txtEl = document.getElementById("txt")
+        var btnEl = document.getElementById("btn")
+
+        function handler() {
+            blkEl.innerText = `<h1>This is innerText statement</h1>`;    
+            txtEl.innerText = `This is innerText statement`;    
+            btnEl.innerText = `button clicked`;    
+        }
+    </script>
+</body>
+</html>

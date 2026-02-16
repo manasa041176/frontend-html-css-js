@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Website</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Navbar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #2c3e50;   /* Change navbar color */
+      padding: 15px 50px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+    nav .search-box input {
+      padding: 5px 10px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url('https://www.transparenttextures.com/patterns/stardust.png'),
+                  linear-gradient(120deg, #2980b9, #2c3e50); /* Change bg */
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .hero h1 {
+      font-size: 40px;
+      font-weight: bold;
+    }
+    .hero p {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+
+    /* Courses Section */
+    .courses {
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .courses h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+    .courses button {
+      background: #2c3e50;   /* Change button color */
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    /* Course Cards */
+    .card-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .card {
+      background: white;
+      width: 220px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .card h3 {
+      margin-bottom: 10px;
+      color: #2c3e50;
+    }
+    .card p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 15px;
+    }
+    .card button {
+      background: #2980b9;   /* Change Read More btn color */
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Event</a></li>
+      <li><a href="#">Members</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+    <div class="search-box">
+      <input type="text" placeholder="Search Course">
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>To Get more knowledge</h1>
+    <p>We offer the best courses for you</p>
+  </section>
+
+  <!-- Courses -->
+  <section class="courses">
+    <h2>We offer the best courses for you</h2>
+    <button>Choose your best course</button>
+
+    <div class="card-container">
+      <div class="card">
+        <h3>PYTHON FULL STACK</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore dicta dolorem.</p>
+        <button>Read More</button>
+      </div>
+
+      <div class="card">
+        <h3>JAVA FULL STACK</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore dicta dolorem.</p>
+        <button>Read More</button>
+      </div>
+
+      <div class="card">
+        <h3>MERN FULL STACK</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore dicta dolorem.</p>
+        <button>Read More</button>
+      </div>
+
+      <div class="card">
+        <h3>MEAN FULL STACK</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore dicta dolorem.</p>
+        <button>Read More</button>
+      </div>
+
+      <div class="card">
+        <h3>LEMP FULL STACK</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore dicta dolorem.</p>
+        <button>Read More</button>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
+

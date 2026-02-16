@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>html  form example</title>
+        <style>
+            form{
+                background-color: rgb(red, green, blue)
+                width: 300px;
+                margin: auto;
+                margin-top: 30px;
+                padding: 20px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                border-bottom: 3px solid rgb(red, green, blue);
+                box-shadow: 0px 0px 10px rgb(rgb(200, 184, 184), green, blue);
+            }
+
+            input{
+                width:100px;
+                padding: 8px;
+                margin-bottom: 10px;
+                margin-top: 5px;
+                border: none;
+                outline: none;
+                border: 1px solid rgb(red, green, blue);
+                border-radius: 5px;
+            }
+            body{
+                background-color: aliceblue;
+            }
+            h2{
+                margin: 0;
+
+            }
+            input:hover{
+                border:1px solid rgb(red, green, blue)
+                background-color:rgb(red, green, blue)
+             }
+                button{
+                    border: none;
+                    padding: 10px;
+                    border-radius: 5px;
+                    cursor: pointer;
+
+                }
+                .btn1{
+                    background-color: rgb(red, green, blue);
+                    color: white;
+                }
+                .btn2{
+                    background-color: rgb(red, green, blue);
+
+                }
+                button:hover{
+                    opacity: 0.6;
+                }
+        </style>
+    </head>
+    <body>
+        <form>
+            <h2>online registrstion</h2>
+            <br>
+            <label for="username">username</label>
+            <input type="text" id="username" placeholder="enater your name" required minlength="6" maxlength="10" value="123">
+            <label for="email">email address</label>
+            <input type="email" id="email" placeholder="example@gmail.com" required name="email">
+            <label for="phone">phone number</label>
+            <input type="tel" id="phone" placeholder="+91 00000000000" required minlength="10" maxlength="13" name="phonenumber">
+            <label for="password">password</label>
+            <input type="password" id="password" name="password" placeholder="create storng password" required minlength="8">
+            <button type="submit" class="btn1">create account</button>
+            <button type="reset" class="btn2">cancel</button>
+        </form>
+    </body>
+</html>

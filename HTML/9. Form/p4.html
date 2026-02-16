@@ -1,0 +1,119 @@
+<html>
+    <head>
+        <title>HTML FORM EXAMPLES</title>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            .container{
+                height: 100vh;
+                /* background-color: lightblue; */
+                background: linear-gradient(65deg, rgb(237, 251, 255), lightblue);
+
+                display: flex;
+                padding: 4%;
+            }
+            .left{
+                   height: 100vh;
+                background-color: rgb(204, 228, 236);
+                flex: 1;
+                padding: 4%;
+            }
+            .right{
+                height: 100vh;
+                background-color: rgb(191, 234, 241);
+                width: 450px;
+            }
+
+            ul{
+                list-style-position: inside;
+            }
+            button{
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="left">
+                <h1>Contact our sales team</h1>
+                <p>Build better processes, faster, with Airtable. Backed by advanced data security, no-code capabilities, and embedded Al, Airtable can help your team speed up important tasks and drive better results.</p>
+                <ul>
+                    <li>Vimeo connected 15+ workflows and cut tool costs</li>
+                    <li>JetBlue accelerated roadmap prioritization from weeks, to minutes</li>
+                    <li>DropBox drove top-line growth, increasing website traffic by 30%</li>
+                </ul>
+                <small>Trusted by 50% of the Fortune 1000</small>
+                <p>For technical or product support, please visit our <a href="#">Help Center</a></p>
+            </div>
+            <div class="right">
+                 <form>
+    <table>
+      <tr>
+        <td>
+          <label for="first-name">*First Name</label><br>
+          <input type="text" id="first-name" name="first-name" required>
+        </td>
+        <td>
+          <label for="last-name">*Last Name</label><br>
+          <input type="text" id="last-name" name="last-name" required>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <label for="email">*Work Email</label><br>
+          <input type="email" id="email" name="email" required>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="phone">*Phone Number</label><br>
+          <input type="tel" id="phone" name="phone" required>
+        </td>
+        <td>
+          <label for="job-title">*Job Title</label><br>
+          <input type="text" id="job-title" name="job-title">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="company">*Company Name</label><br>
+          <input type="text" id="company" name="company">
+        </td>
+        <td>
+          <label for="country">*Country</label><br>
+          <select id="country" name="country">
+            <option value="">Select</option>
+            <option value="India">India</option>
+            <option value="USA">United States</option>
+            <option value="UK">United Kingdom</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <label for="desc1">*How can our team help?</label><br>
+          <textarea id="desc1" name="desc1" rows="3"></textarea>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <label for="desc2">*How are you looking to use Airtable?</label><br>
+          <textarea id="desc2" name="desc2" rows="3"></textarea>
+        </td>
+      </tr>
+    </table>
+
+    <p>
+      By clicking “Submit”, I acknowledge and understand that my personal information 
+      may be collected and used as described in Airtable’s Privacy Policy.
+    </p>
+
+    <button type="submit">Submit</button>
+
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .b1, .b2{
+            width: 300px;
+            margin: 20px;
+            padding: 20px;
+            border: 2px solid #ccc;
+            font-size: 2rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 900;
+        }
+        .b1{
+            writing-mode: vertical-lr;
+            text-orientation: mixed;
+        }
+
+        .b2{
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>text-orientation</h1>
+    </center>
+    <hr>
+
+    <div class="b1">
+        This is the text1
+    </div>
+
+    <div class="b2">
+        this is the text2
+    </div>
+</body>
+</html>

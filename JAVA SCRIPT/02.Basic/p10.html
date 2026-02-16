@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Resume</title>
+    <style> 
+    
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1 { color: #333; }
+        section { margin-bottom: 15px; }
+        ul { list-style-type: none; padding: 0; }
+        li { margin-bottom: 5px; }
+         
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="fullName"></h1>
+        <p id="contactInfo"></p>
+    </header>
+
+    <section>
+        <h2>Summary</h2>
+        <p id="summary"></p>
+    </section>
+
+    <section>
+        <h2>Experience</h2>
+        <ul id="experienceList"></ul>
+    </section>
+
+    <section>
+        <h2>Education</h2>
+        <ul id="educationList"></ul>
+    </section>
+
+    <section>
+        <h2>Skills</h2>
+        <ul id="skillsList"></ul>
+    </section>
+
+    
+
+    <script>
+        const resumeData = {
+            fullName: "Kavya.M.",
+            contactInfo: "Kavya@email.com | (123) 456-7890",
+            summary: "Highly motivated and results-oriented professional with experience in...",
+            experience: [
+                { title: "Software Engineer", company: "infosys", dates: "Jan 2024- Present", description: "Developed and maintained web applications using JavaScript..." },
+                { title: "Junior Developer", company: "Innovate Solutions", description: "Assisted in front-end development and bug fixing..." }
+            ],
+            education: [
+                { degree: "Bachelor of Science in Computer Science", institution: " Bangalore University ", year: "2020" }
+            ],
+            skills: ["JavaScript", "HTML", "CSS", "React", "Node.js", "Git"],
+
+        
+        };
+
+        document.getElementById('fullName').textContent = resumeData.fullName;
+        document.getElementById('contactInfo').textContent = resumeData.contactInfo;
+        document.getElementById('summary').textContent = resumeData.summary;
+
+        const experienceList = document.getElementById('experienceList');
+        resumeData.experience.forEach(job => {
+            const li = document.createElement('li');
+            li.innerHTML = `<strong>${job.title}</strong> at ${job.company} (${job.dates})<br>${job.description}`;
+            experienceList.appendChild(li);
+        });
+
+        const educationList = document.getElementById('educationList');
+        resumeData.education.forEach(edu => {
+            const li = document.createElement('li');
+            li.textContent = `${edu.degree} from ${edu.institution} (${edu.year})`;
+            educationList.appendChild(li);
+        });
+
+        const skillsList = document.getElementById('skillsList');
+        resumeData.skills.forEach(skill => {
+            const li = document.createElement('li');
+            li.textContent = skill;
+            skillsList.appendChild(li);
+        });
+    </script>
+</body>
+</html>

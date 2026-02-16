@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            padding: 20px;
+            background-color: lightgray;
+            width: 70%;
+            margin: auto;
+        }
+        .container+h1{
+            background-color: lightblue;
+            padding: 10px;
+            border: 2px solid #0c0c0c;
+        }
+
+        .container + h1 + p{
+            color: red;
+        }
+        .container + h1 + p + h1{
+            background-color: lightcoral;
+        }
+        
+        .container + h1 + p + h1 + p + div{
+            padding: 20px;
+            background-color: lightgray;
+        }
+          .container + h1 + p + h1 + p + div +h1{
+            background-color: lightgreen;
+          }
+        
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Combinators</h1>
+        <p> Adjacent sibling selector (using +)</p>
+    </center>
+    <hr>
+    <section class="container">
+        <h1>This is the heading1 (child element)</h1>
+        <p>This is the paragraph1 (child element)</p>
+
+        <h1>This is the heading2 (child element)</h1>
+        <p>This is the paragraph2 (child element)</p>
+
+        <div>
+            <h1>This is the heading3 (Grand child element)</h1>
+            <p>This is the paragraph3 (Grand child element)</p>
+        </div>
+
+        <h1>This is the heading4 (child element)</h1>
+        <p>This is the paragraph4 (child element)</p>
+    </section>
+
+     <h1>This is the heading1 (child element)</h1>
+        <p>This is the paragraph1 (child element)</p>
+
+        <h1>This is the heading2 (child element)</h1>
+        <p>This is the paragraph2 (child element)</p>
+
+        <div>
+            <h1>This is the heading3 (Grand child element)</h1>
+            <p>This is the paragraph3 (Grand child element)</p>
+        </div>
+
+        <h1>This is the heading4 (child element)</h1>
+        <p>This is the paragraph4 (child element)</p>
+</body>
+</html>

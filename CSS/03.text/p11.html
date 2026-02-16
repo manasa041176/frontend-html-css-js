@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 2px  solid #0c0c0c;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 2;
+            font-size:5rem;
+        }
+        .b1{
+            text-emphasis-style: filled;
+            text-emphasis-position: under;
+            text-emphasis-color: red;
+        }
+        .b2{
+            text-emphasis-style: double-circle;
+            text-emphasis-position: over;
+            text-emphasis-color: green;
+        }
+
+        .b3{
+            /* text-emphasis-style: "&"; */
+            text-emphasis-style: "😊";
+            text-emphasis-position: over;
+            text-emphasis-color: green;
+        }
+
+        .b4{
+            /* text-emphasis-style: triangle;
+            text-emphasis-position: under;
+            text-emphasis-color: red; */
+
+            text-emphasis: triangle  teal;
+            text-emphasis-position: under;
+        .b5{
+            writing-mode: vertical-rl;
+            text-emphasis-style: double-circle;
+            /* text-emphasis-position: over left; */
+            text-emphasis-position: over right;
+        }
+
+            
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>text-emphasis</h1>
+    </center>
+    <hr>
+    <p class="b1">Lorem, ipsum dolor.</p>
+
+    <p class="b2">Lorem, ipsum dolor.</p>
+
+    <p class="b3">Lorem, ipsum dolor.</p>
+
+    <p class="b4">Lorem, ipsum dolor.</p>
+</body>
+</html>

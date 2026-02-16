@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Line Chart Example</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #fff;
+  }
+  canvas {
+    border: 1px solid #ddd;
+  }
+</style>
+</head>
+<body>
+
+<canvas id="myChart" width="600" height="400"></canvas>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+const ctx = document.getElementById('myChart').getContext('2d');
+
+new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels: ['1','2','3','4','5','6','7','8','9','10','11','12'],
+    datasets: [{
+      label: '',
+      data: [5, 10, 40, 25, 60, 60, 30, 80, 75, 78, 88, 35],
+      borderColor: 'red',
+      borderWidth: 1.5,
+      fill: false,
+      pointBackgroundColor: 'red',
+      pointBorderColor: 'red',
+      pointRadius: 4,
+      tension: 0 // straight lines
+    }]
+  },
+  options: {
+    plugins: {
+      legend: { display: false }
+    },
+    scales: {
+      y: {
+        beginAtZero: true,
+        max: 100,
+        ticks: {
+          callback: value => value + '%'
+        },
+        title: {
+          display: true,
+          text: '%',
+          align: 'start'
+        }
+      },
+      x: {
+        title: {
+          display: true,
+          text: 'days'
+        }
+      }
+    }
+  }
+});
+</script>
+
+</body>
+</html>

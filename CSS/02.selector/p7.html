@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+       a[href="https://facebook.com"]{
+            display: block;
+            color: red;
+            padding: 10px;
+            border: 1px solid red;
+            width: 300px;
+            margin: auto;
+            text-align: center;
+        }
+        a[href="https://google.com"]{
+            background-color: lightblue;
+            padding: 20px;
+            display: block;
+            text-align: end;
+            width: 500px;
+            margin: auto;
+            margin-top: 20px;
+        }
+
+        form[action]{
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            margin: auto;
+        }
+
+        input[type="text"]{
+            width: 100%;
+            padding: 10px;
+            border: 2px solid red;
+            margin-top: 8px;
+            margin-bottom: 1px;
+        }
+
+         input[type="email"]{
+            width: 100%;
+            padding: 10px;
+            border: 1px solid rgb(193, 189, 189);
+            margin-top: 8px;
+            margin-bottom: 10px;
+        }
+        button[type]{
+            border: none;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        button[type="submit"]{
+            background-color: darkslategray;
+            color: #fff;
+        }
+
+        button[type=reset]{
+            background-color: lightgray;
+            border-radius: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <center>
+        <h1 action>Attribute with value selector (using any attribute with value of the html element)</h1>
+    </center>
+    <hr>
+    <a href="https://facebook.com" target="_blank">Visit Facebook</a>
+    <a href="https://google.com">Visit Google</a>
+    <a href="https://linkedin.com" target="_blank">Visit Linkedin</a>
+
+    <form action="">
+        <label for="">Username</label>
+        <input type="text" placeholder="ENter your name" id="name" name="username" required>
+         <label for="">Email Address</label>
+        <input type="email" placeholder="ENter your email" id="email" name="email_address" required>
+
+        <button type="submit">Create account</button>
+        <button type="reset" >Cancel</button>
+    </form>
+</body>
+</html>

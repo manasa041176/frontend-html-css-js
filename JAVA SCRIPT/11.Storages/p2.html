@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> localstorage</h1>
+
+    <from method="post" onsubmit="submitHandler(event)">
+        <div><label for="user">username</label>
+        <input type="text" name="user" id="user" required>
+    </div>
+       <div>
+        <button type="submit">add user</button>
+       </div>
+    
+    </from>
+    <hr>
+    <section id="output"></section>
+    <script>
+        let userEl=document.getElementById("user")
+        let outEl=document.getElementById("output")
+
+        function submitHandler(e){
+            e.preventDefault();
+            let user=userEl.value;
+            if(!user){
+                alert("username is required")
+            }else{
+                //store the value
+                localStorage.setItem("username",user)
+                alert("username added")
+                window.location.reload()
+            }
+        }
+
+        //to read the data
+        function readData(){
+            let user = localStorage.getItem("username"); //read data from localstorage
+            if(!user){
+                outEl.innerHTML=`<h1> no username <h1>`;
+                }else{
+                    outEl.innerHTML=`<div>
+                <h1> username  is ${user}</h1>
+                <button onclick="removedata()">Remove user</button>
+                </div>`;
+                }
+               
+            }
+        
+        readData()
+
+        //delete data
+        function removeData(){
+            if(window.confirm(`are you sure to delete username?`)){
+                localStorage.removeItem("username")
+                alert("username removed")
+                window.location.reload();
+            }
+        }
+    </script>
+</body>
+</html>

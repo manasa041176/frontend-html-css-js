@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(230, 230, 230);
+            font-family: sans-serif;
+        }
+        form{
+            min-width: 300px;
+            padding: 20px;
+            background-color: white;
+        }
+        input{
+            padding: 8px 10px;
+            border: none;
+            width: 100%;
+            outline: none;
+            font-size: 1em;
+            display: block;
+            margin-bottom: 10px;
+            margin-top: 4px;
+            border: 1px solid #ccc;
+        }
+        input:enabled{
+            border: 1px solid green;
+        }
+        input:disabled{
+            border: 1px solid gray;
+            background-color: lightgray;
+            cursor: no-drop;
+        }
+    </style>
+</head>
+<body>
+    <form autocomplete="on">
+        <h2>:enable and :disable</h2>
+        <label for="">username</label>
+        <input type="text" name="username" placeholder="type here...">
+
+        <label for="">email address</label>
+        <input type="email" name="email" placeholder="type here..." disabled>
+
+        <label for="">Date of birth</label>
+        <input type="date" name="birthdate">
+        <button>Submit</button>
+    </form>
+</body>
+</html>

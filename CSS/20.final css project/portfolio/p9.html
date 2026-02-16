@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: #1e1e1e;
+            gap: 10px;
+        }
+         .dynamic-button {
+            display: flex;
+            gap: 10px;
+        }
+        .dynamic-button:hover .box::before{
+            transform: translateX(0%);
+        }
+        .box{
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-weight: 700;
+            color: #fff;
+            transition: all 0.8s;
+            cursor:pointer;
+            position: relative;
+            background: linear-gradient(135deg, rgb(4, 130, 4), white);
+            overflow: hidden;
+            border-radius: 5px;
+            margin: 0px;
+        }
+        .box::before{
+          content: var(--l);
+          position: absolute;
+          top: 0%;
+          left: 0%;
+        background: linear-gradient(135deg, rgb(157, 237, 157), rgb(37, 37, 37));
+            transform: translateX(-100%);
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+           transition:  0.4s;
+        }
+
+</style>
+
+</head>
+<body>
+     <div class="dynamic-button">
+        <div class="box" style="--l:'w'">H</div>
+        <div class="box" style="--l:'o'">E</div>
+        <div class="box" style="--l:'r'">L</div>
+        <div class="box" style="--l:'l'">L</div>
+        <div class="box" style="--l:'d'">O</div>
+    </div>
+    
+</body>
+</html>

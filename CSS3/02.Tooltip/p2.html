@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .tooltip{
+            position: relative;
+        }
+        .tooltip-message{
+            background-color: #0c0c0c;
+            padding: 8px;
+            color: #fff;
+            position: absolute;
+            width: 200px;
+            right: -20px;
+            top: 50%;
+            transform: translateX(100%) translateY(-50%);
+            border-radius: 10px;
+            display: none;
+        }
+        .tooltip-message::before{
+            content: "";
+            position: absolute;
+            /* width: 10px;
+            height: 10px; */
+            border-width: 10px;
+            border-color: transparent #0c0c0c transparent transparent;
+            border-style: solid;
+            left: -19px;
+        }
+        .tooltip:hover .tooltip-message{
+            display: block;
+        }
+
+        button{
+            border: none;
+            padding: 10px 20px;
+            background-color: darkslateblue;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="tooltip">
+        <button>Hover</button>
+        <div class="tooltip-message">
+            <span>this is the tooltip message</span>
+        </div>
+    </div>
+</body>
+</html>

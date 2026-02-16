@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        [href]{
+            display: block;
+            color: green;
+            padding: 10px;
+            background-color: lightblue;
+            margin-bottom: 10px;
+        }
+        a[target]{
+            border-radius: 100px;
+            width: 300px;
+        }
+
+        input[type]{
+            width: 100%;
+            display: block;
+            padding: 8px;
+            margin-top: 8px;
+            margin-bottom: 10px;
+        }
+
+        form[action]{
+            padding: 20px;
+            border: 1px solid #ccc;
+            width: 300px;
+            margin: auto;
+        }
+        button[type]{
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1 action>Attribute selector (using any attribute of the html element)</h1>
+    </center>
+    <hr>
+    <a href="https;//facebook.com" target="_blank">Visit Facebook</a>
+    <a href="https;//google.com">Visit Google</a>
+    <a href="https;//linkedin.com" target="_blank">Visit Linkedin</a>
+
+    <form action="">
+        <label for="">Username</label>
+        <input type="text" placeholder="ENter your name" id="name" name="username" required>
+         <label for="">Email Address</label>
+        <input type="email" placeholder="ENter your email" id="email" name="email_address" required>
+
+        <button type="submit">Create account</button>
+        <button type="reset">Cancel</button>
+    </form>
+</body>
+</html>

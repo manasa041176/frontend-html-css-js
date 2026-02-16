@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>exec()</h1>
+
+    <p> it returns any of array of captures or null if not matched</p>
+
+    <script>
+        var str = "welcome to javascript. Today we are learning javascript regularly expression. javascript is front en scrip. Every Browser has built in JAVASCRIPT comilers. ";
+
+        var reg = /javascript/gi;
+
+        var test = reg.exec(str);
+
+        if(test){
+            console.log(`output = `,test) //arry of first match
+            console.log(`str=`,str.replace(/javascript/gi,"js"))
+        } else {
+            console.log(test) // null
+        }
+    </script>
+</body>
+</html>

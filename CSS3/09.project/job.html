@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>job application form</title>
+    <link rel="stylesheet" href="stylejob.css">
+</head>
+<body>
+    <div class="container">
+        <div class="apply_box">
+            <h1>
+                job appication
+                <span class="title_small">(web)</span>
+            </h1>
+            <form action="">
+                <div calss="form_container">
+                    <div clas="form_control">
+                        <label for="first_name">first name</label>
+                        <input id="first_name"
+                        name="first_name"
+                        placeholder="Enter first name.."
+                        required
+                        />
+                        </div>
+                        <div class="form_control">
+                            <label for="last_name">last name</label>
+                            <input 
+                            id="last_name"
+                            name="last_name"
+                            placeholder="enter last name.."
+                            required
+                            />
+                         </div>
+                         <div class="form_control">
+                            <label for="email">email</label>
+                            <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="enter email.."
+                            required
+                            />
+                         </div>
+                         <div class="form_control">
+                            <label for="job_role">job role</label>
+                            <select id="job_role" name="job_role" required>
+                            <option value="">Select job role</option>
+                            <option value="react">react</option>
+                            <option value="node">node.js</option>
+                            <option value="full_stack">full stack developer</option>
+                            <option value="frontend">frontend developer</option>
+                             </select>
+                         </div>
+                         <div class="textarea_control">
+                            <label for="address">address</label>
+                            <textarea
+                            id="address"
+                            name="address"
+                            row="4"
+                            cols="50"
+                            placeholder="enter address"
+                            required></textarea>
+                         </div>
+                         <div class="form_control">
+                            <label for="city">City</label>
+                            <input
+                            id="city"
+                            name="city"
+                            placeholder="enter city name.."
+                            required
+                            />
+                         </div>
+                         <div class="form_control">
+                            <label for="pincode">pincode</label>
+                            <input
+                            type="number"
+                            id="pincode"
+                            name="pincode"
+                            placeholder="enter pincode here.."
+                            required
+                            />
+                         </div>
+                         <div class="form_control">
+                          <label for="date">D.O.B</label>  
+                          <input value="1999-05-24" type="date" id="date" name="date"/>
+                        </div>
+                        <div class="form_control">
+                            <label for="upload">upload your CV</label>
+                            <input
+                            type="file"
+                            id="upload"
+                            name="upload"
+                            required/>
+                        </div>
+                    </div>
+                    <div class="button_container">
+                        <button type="submit">Apply Now</button>
+                    </div>
+            </form>
+              </div>
+    </div>
+</body>
+</html>

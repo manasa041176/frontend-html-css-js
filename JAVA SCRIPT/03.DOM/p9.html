@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>document.formName.inputName.value </h1>
+
+    <form method="post" name="loginForm" onsubmit="submitHandler(event)">
+        <div>
+            <label for="user">username</label>
+            <input type="text" name="user" id="user" required>
+        </div>
+
+        <div>
+            <label for="pass">password</label>
+            <input type="password" name="pass" id="pass" required>
+        </div>
+
+        <div>
+            <button type="submit">Login</button>
+        </div>
+    </form>
+
+    <hr>
+
+    <div id="out"></div>
+
+    <script>
+
+        var outEl = document.getElementById("out")
+
+        function submitHandler(event) {
+            event.preventDefault();
+            let username = document.loginForm.user.value;
+            let password = document.loginForm.pass.value;
+            outEl.innerHTML = `<section>
+                        <h1> username is ${username} </h1>
+                        <h2> password is ${password} </h2>
+                 </section>`
+        }
+    </script>
+</body>
+</html>

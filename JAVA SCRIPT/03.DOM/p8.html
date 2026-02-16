@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>document.getElementById(id).value</h1>
+
+    <form method="post" onsubmit="submitHandler(event)">
+        <div>
+            <label for="user">Your user name</label>
+            <input type="text" name="user" id="user">
+        </div>
+
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+
+    <hr>
+
+    <div id="out"></div>
+
+    <script>
+        var userEl = document.getElementById("user");
+        var outEl = document.getElementById("out");
+
+        function submitHandler(event) {
+            event.preventDefault(); // to avoid page reload after submission
+            let name = userEl.value;
+            outEl.innerHTML = `<h1> username is ${name} </h1>`
+        }
+    </script>
+</body>
+</html>

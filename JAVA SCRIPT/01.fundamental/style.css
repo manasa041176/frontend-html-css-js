@@ -1,0 +1,12 @@
+h1 {
+    text-align: center;
+    color: rebeccapurple;
+}
+
+button {
+    padding: 6px 9px;
+    border: none;
+    background-color: orange;
+    color: #fff;
+    cursor: pointer;
+}

@@ -1,0 +1,17 @@
+h2{
+            width: 300px;
+            margin-bottom: 10px;
+            background-color: #0c0c0c;
+            color: orange;
+            font-family: sans-serif;
+            font-weight: 400;
+            padding: 20px;
+        }
+
+        p{
+            color: tomato;
+            background-color: rgba(255, 174, 160, 0.347);
+            padding: 20px;
+            margin-bottom: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }

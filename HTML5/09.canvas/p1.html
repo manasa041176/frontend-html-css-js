@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="profile" width="200" height="200" style="border: 2px solid #ccc; margin-top: 30px; background-color:lightgray; border-radius: 100px;"></canvas>
+    <script>
+        var canvas1=document.getElementById('profile').getcontext('2d');
+        canvas1.begingpath();
+        canvas1.arc(85, 100, 89 , 6.28);
+        canvas1.fillStyle="gray";
+
+        canvas1.fill();
+        canvas1.closepath();
+
+        canvas1.begingpath();
+        canvas1.arc(85, 70, 50,0, 6.28);
+        canvas1.fillStyle="gray";
+        canvas1.fill();
+
+        canvas1.strockestyle = "lightgray";
+        canvas1.linewidth=10
+        canvas1.strock();
+        canvas1.closepath();
+        </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress & Meter tag</title>
+</head>
+<body>
+   
+      <center>
+            <h1>PROGRESS TAG..!</h1>
+            The progress element represents the completion progress of a task. The progress is either indeterminate, indicating that progress is being made but that it is not clear how much more work remains to be done before the task is complete (e.g. because the task is waiting for a remote host to respond), or the progress is a number in the range zero to a maximum, giving the fraction of work that has so far been completed.
+        </center>
+
+        <hr>
+
+        <h1>Default progress tag</h1>
+        <progress></progress>
+        <hr>
+
+        <h1>Static progress tag</h1>
+        <hr>
+        <progress min="0" max="100" value="50"></progress>
+        <hr>
+        <p>HTML <progress min="0" max="100" value="10"></progress></p>
+        <p>HTML5 <progress min="0" max="100" value="20"></progress></p>
+        <p>CSS <progress min="0" max="100" value="30"></progress></p>
+        <p>CSS3 <progress min="0" max="100" value="40"></progress></p>
+        <p>Javascript <progress min="0" max="100" value="90"></progress></p>
+        <p>React JS <progress min="0" max="100" value="100"></progress></p>
+
+        <hr>
+        <h1>Dynamic Progress tag</h1>
+        <hr>
+        <p>File is Downloading.. <progress min="0" max="100" value="10" id="progress1"></progress> <span id="result"></span></p>
+        <script>
+            var fname = "arun";
+            console.log("Hello welcome to simple Javascript code..");
+            console.log(fname);
+
+
+            //example
+            var progress1 = document.getElementById("progress1");
+            var spanTag = document.getElementById('result')
+
+            console.log(progress1);
+           
+
+            function logic(){
+                // document.write("hello")
+                progress1.value++;
+                spanTag.innerText=progress1.value + "%";
+                console.log(progress1.value);
+                
+            }
+            // logic()
+            // logic()
+    
+            setInterval("logic()", 100); //1000ms = 1s
+            
+        </script>
+</body>
+</html>

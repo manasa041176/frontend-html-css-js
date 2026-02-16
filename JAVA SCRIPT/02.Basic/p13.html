@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        var images = [];
+       
+       function getData(){
+         axios.get("https://jsonplaceholder.typicode.com/photos")
+         .then((res)=>{
+            //if request if successfull
+            // console.log(res.data);
+
+            images=res.data; //assaigning data to images array
+
+            console.log(images);
+              for(let item of products){
+              document.write(
+            
+            
+         })
+         .catch((error)=>{
+            //incase error
+            console.log(error);
+            
+         })
+       
+       }
+       
+       getData();
+
+
+       
+    </script>
+</body>
+</html>

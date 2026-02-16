@@ -1,0 +1,28 @@
+rules
+
+1. /expression/ - if it is string
+
+2. /^condition$/
+^ -> open tag
+$ -> close tag
+
+3. [] - grouping (to group the regular expression)
+
+4.()-> group of multiple characters
+
+5.[abcdef] - input should match alteast one occurence of given characters
+
+6.[a-z] [A-Z] [0-9] [a-zA-Z0-9]
+
+7.properties / operators
+. => matches any character except link break
+? => match atleast = & 1
+* => match 0 or more occurence
++ => match 1 or more
+{n} => matches exactly n occurence 
+{n,m} => matches exactly n and m occurence
+
+g -> global
+gi -> global case insensitive
+u -> unicode
+y -> sticky

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bar Chart HTML Example</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 40px;
+  }
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .chart {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    height: 300px;
+    width: 80%;
+    margin: auto;
+    border-left: 2px solid #999;
+    border-bottom: 2px solid #999;
+    position: relative;
+  }
+
+  .chart::before {
+    content: "0%";
+    position: absolute;
+    bottom: -20px;
+    left: -25px;
+  }
+
+  .chart::after {
+    content: "100%";
+    position: absolute;
+    top: -20px;
+    left: -35px;
+  }
+
+  .bar {
+    width: 40px;
+    text-align: center;
+    color: #333;
+    border-radius: 4px 4px 4px 4px;
+  }
+
+  .bar div {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    margin-top: 10px;
+  }
+
+  
+  .bar1 { height: 70%; background-color: #ff6b6b; }   
+  .bar2 { height: 30%; background-color: #feca57; }   
+  .bar3 { height: 10%; background-color: #1dd1a1; }   
+  .bar4 { height: 50%; background-color: #54a0ff; }   
+  .bar5 { height: 45%; background-color: #5f27cd; }   
+  .bar6 { height: 40%; background-color: #ff9ff3; }   
+  .bar7 { height: 8%;  background-color: #48dbfb; }   
+  .bar8 { height: 25%; background-color: #10ac84; }   
+
+  .label {
+    transform: rotate(-45deg);
+    margin-top: 10px;
+    font-size: 14px;
+  }
+</style>
+</head>
+<body>
+  <h2>Bar Chart </h2>
+  
+  <div class="chart">
+    <div class="bar bar1"><div>Your Blog</div></div>
+    <div class="bar bar2"><div>Medium</div></div>
+    <div class="bar bar3"><div>Tumblr</div></div>
+    <div class="bar bar4"><div>Facebook</div></div>
+    <div class="bar bar5"><div>YouTube</div></div>
+    <div class="bar bar6"><div>LinkedIn</div></div>
+    <div class="bar bar7"><div>Twitter</div></div>
+    <div class="bar bar8"><div>Other</div></div>
+  </div>
+</body>
+</html>

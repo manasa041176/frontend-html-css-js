@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            display: flex;
+            padding: 4%;
+        }
+        .chef{
+            flex: 1;
+        }
+        .user{
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="user card">
+            <header class="card-header">
+                <h1 class="fs-5 m-0">user Pannel</h1>
+            </header>
+           <div class="card-body text-center">
+            <button class="btn btn-dark d-block m-auto mb-3">Check Order Status</button>
+
+             <img src="https://thumbs.dreamstime.com/b/pending-stamp-pending-grunge-vintage-stamp-isolated-white-background-pending-sign-122259380.jpg" alt="" id="success-img" class="w-25">
+           </div>
+        </div>
+
+        <div class="chef card">
+          <header class="card-header">
+              <h1 class="fs-5 m-0">Admin Pannel</h1>
+          </header>
+           <div class="card-body text-center">
+             <button class="btn btn-dark" onclick="MakeOrderReady()">Make Order is Ready</button>
+
+             <button class="btn btn-danger" onclick="MakeOrderNotReady()">Update Order Not Ready</button>
+           </div>
+        </div>
+    </div>
+
+
+    <script>
+        var imagetag = document.getElementById("success-img")
+        
+        var isOrderReady = false;
+        
+        function MakeOrderReady(){
+            isOrderReady = true;
+            if(isOrderReady == true){
+                imagetag.src = "https://static.vecteezy.com/system/resources/thumbnails/071/848/661/small/flat-style-thumb-up-with-check-mark-sign-hand-gesture-illustration-png.png"
+            }else{
+                imagetag.src = "https://thumbs.dreamstime.com/b/pending-stamp-pending-grunge-vintage-stamp-isolated-white-background-pending-sign-122259380.jpg"
+            }
+        }
+
+
+        function MakeOrderNotReady(){
+            isOrderReady = false;
+            if(isOrderReady == true){
+                imagetag.src = "https://static.vecteezy.com/system/resources/thumbnails/071/848/661/small/flat-style-thumb-up-with-check-mark-sign-hand-gesture-illustration-png.png"
+            }else{
+                imagetag.src = "https://thumbs.dreamstime.com/b/pending-stamp-pending-grunge-vintage-stamp-isolated-white-background-pending-sign-122259380.jpg"
+            }
+        }
+    </script>
+    
+</body>
+</html>

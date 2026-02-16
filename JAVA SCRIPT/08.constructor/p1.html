@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>constructor</h1>
+    <pear>
+        1.built  in
+        Date,number,boolean,string,object,math,array,map,set,
+        2.custom
+
+    </pear>
+    <script>
+        let x=new Date();
+        document.writeln(`<p> ${x} </p>`);
+       
+        //methods of date-IST
+        document.writeln(`<h3> day=${ x.getday() } </h3>`);
+        document.writeln(`<h3> date=${ x.getdate() } </h3>`);
+        document.writeln(`<h3> month=${ x.getmonth() } </h3>`); /* 0->jan 11-dec */
+        document.writeln(`<h3> full year=${ x.getfillyear() } </h3>`);
+        document.writeln(`<h3> year=${ x.getyear() } </h3>`);
+
+         
+        document.writeln(`<h3> hour=${ x.gethours() } </h3>`);
+        document.writeln(`<h3> min=${ x.getMinutes() } </h3>`);
+        document.writeln(`<h3> sec=${ x.getseconds() } </h3>`); 
+        document.writeln(`<h3> millisecond=${ x.getmilliseconds() } </h3>`);
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>portfolio</title>
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#9aa4b2; --accent:#7dd3fc;
+      --glass: rgba(255,255,255,0.03);
+      --radius:12px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; background:linear-gradient(180deg,var(--bg),#071022 120%);
+      color:#e6eef6; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+      line-height:1.45; padding:28px; min-height:100vh;
+    }
+    .container{max-width:1000px; margin:0 auto;}
+    header{display:flex; gap:20px; align-items:center; margin-bottom:28px;}
+    .avatar{
+      width:96px; height:96px; border-radius:20px; overflow:hidden; flex:0 0 96px;
+      background:linear-gradient(135deg,#0ea5e9,#6366f1);
+      display:flex; align-items:center; justify-content:center; font-weight:700; font-size:28px;
+      box-shadow: 0 6px 20px rgba(2,6,23,0.6);
+    }
+    h1{margin:0; font-size:22px}
+    p.lead{margin:6px 0 0; color:var(--muted); font-size:14px}
+    nav{margin-left:auto}
+    nav a{color:var(--muted); text-decoration:none; margin-left:12px; font-size:14px}
+    main{display:grid; grid-template-columns: 1fr; gap:20px;}
+    .card{background:var(--card); border-radius:var(--radius); padding:18px; box-shadow:0 6px 30px rgba(2,6,23,0.6)}
+    .skills{display:flex; flex-wrap:wrap; gap:10px; margin-top:8px}
+    .skill{background:var(--glass); padding:6px 10px; border-radius:999px; color:var(--muted); font-size:13px}
+    .projects{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px}
+    .project{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent); padding:12px; border-radius:12px; min-height:140px; display:flex; flex-direction:column; gap:8px;}
+    .project img{width:100%; height:110px; object-fit:cover; border-radius:8px; background:#022;}
+    .project h3{margin:0; font-size:16px}
+    .project p{margin:0; color:var(--muted); font-size:13px; flex:1}
+    .cta{display:flex; gap:10px; margin-top:12px; align-items:center}
+    .btn{padding:8px 12px; border-radius:10px; background:transparent; color:var(--accent); border:1px solid rgba(125,211,252,0.18); text-decoration:none; font-weight:600}
+    footer{text-align:center; color:var(--muted); margin-top:18px; font-size:13px}
+    /* Responsive tweaks */
+    @media(min-width:880px){
+      main{grid-template-columns: 320px 1fr;}
+      .left {position:sticky; top:28px; align-self:start}
+    }
+    
+    .modal{position:fixed; inset:0; display:none; align-items:center; justify-content:center; background:rgba(0,0,0,0.6)}
+    .modal.open{display:flex}
+    .modal .panel{width:92%; max-width:720px; background:#071226; padding:18px; border-radius:12px}
+    .close{margin-left:auto; background:transparent; border:none; color:var(--muted); font-size:16px}
+    input,textarea{width:100%; padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03); background:transparent;color:inherit}
+    label{font-size:13px; color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="avatar" aria-hidden="true">😊</div>
+      <div>
+        <h1>MANASA</h1>
+        <p class="lead">Frontend developer </p>
+      </div>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Left column -->
+      <div class="left">
+        <section class="card">
+          <h2 style="font-size:16px;margin:0 0 6px">About</h2>
+          <p style="color:var(--muted);margin:0 0 10px">creating modren interactive web experience with HTML,CSS and python. front end developer</p>
+          <h3 style="font-size:13px;margin-top:8px;color:var(--muted)">Skills</h3>
+          <div class="skills">
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">python</span>
+            <span class="skill">React</span>
+            <span class="skill">Node</span>
+          </div>
+
+          <div style="margin-top:12px">
+            <a class="btn" href="#" id="open-resume">Download CV</a>
+            <a class="btn" href="#contact">Hire me</a>
+          </div>
+        </section>
+
+        <section class="card" style="margin-top:12px">
+          <h3 style="margin:0 0 8px">Contact</h3>
+          <p style="color:var(--muted);margin:0 0 10px">+91 99999 99999</p>
+          <div style="display:flex; gap:8px">
+            <a class="btn" href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn" href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </section>
+      </div>
+
+      <div>
+        <section id="projects" class="card">
+          <h2 style="font-size:16px;margin:0 0 12px">Projects</h2>
+          <div class="projects">
+            <article class="project">
+              <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240207113731/Portfolio-Website-Project-Banner.webp" alt="Screenshot of project 1"/>
+              <h3>Project One</h3>
+               <strong></strong> <a href="#" class="link"></a> <strong></strong> <a href="#" class="link"></a></p>
+            </article>
+
+            <article class="project">
+              <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240726151700/Front-end-Projects-with-designs-to-Help-Improve-Your-Coding-Skills.webp" alt="Screenshot of project 2"/>
+              <h3>Project Two</h3>
+              
+            </article>
+        </div>
+        </section>
+
+       
+
+        <footer>
+          <span id="year"></span> 
+        </footer>
+      </div>
+    </main>
+  </div>
+
+ 
+  <div class="modal" id="modal">
+    <div class="panel">
+      <div style="display:flex; gap:12px; align-items:center">
+        <h3 style="margin:0">Project One</h3>
+        <button class="close" onclick="closeModal()">✕</button>
+      </div>
+      <p style="color:var(--muted);margin-top:10px"></p>
+    </div>
+  </div>
+
+  <script>
+    
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function openModal(){ document.getElementById('modal').classList.add('open') }
+    function closeModal(){ document.getElementById('modal').classList.remove('open') }
+    document.getElementById('open-modal').addEventListener('click', openModal);
+    document.getElementById('modal').addEventListener('click', (e)=>{ if(e.target === e.currentTarget) closeModal() });
+
+    function sendMail(){
+      const name = encodeURIComponent(document.getElementById('name').value || 'Guest');
+      const msg = encodeURIComponent(document.getElementById('msg').value || 'Hi, I saw your portfolio.');
+      window.location.href = mailto:you@domain.com?subject=Contact from ${name}&body=${msg};
+    }
+
+    document.getElementById('open-resume').addEventListener('click', (e)=>{
+      e.preventDefault();
+     
+      window.open('resume.pdf', '_blank');
+    });
+  </script>
+</body>
+</html>
+
+

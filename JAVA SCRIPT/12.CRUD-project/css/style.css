@@ -1,0 +1,88 @@
+@import url("https://fonts.googleleapis.com/css2?family=Poppins&display=swap");
+*{
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+.navbar{
+    background-color: #8885ff;
+    height: 60px;
+    width: 100%;
+}
+.navbar .container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar a{
+    text-decoration: none;
+}
+.navbar .logo{
+    color:#fff;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.navbar .menu a{
+    padding: 6px 9px;
+    background-color: #fff;
+    color:#8885ff;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all o.5s;
+}
+.navbar .menu a:hover{
+    background-color: #222;
+    color: #fff;
+}
+.title{
+    text-align: center;
+}
+.title h1{
+    color:#8885ff;
+}
+/* from css */
+.card{
+    width:60%;
+    margin: auto;
+    border: 1px solid #ccc;
+    padding: 2rem;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 6px 9px;
+    border: 1px solid #8885ff;
+    border-radius: 6px;
+}
+
+.btn{
+    border: none;
+    padding: 6px 9px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.success { background-color: #8885ff;}
+

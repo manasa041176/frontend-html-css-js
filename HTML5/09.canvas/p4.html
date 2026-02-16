@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+       <canvas id="profile" width="500" height="500" style="border: 2px solid #ccc;"></canvas>
+ 
+    </center>
+    <script>
+         var canvas1 = document.getElementById('profile').getContext('2d');
+       canvas1.moveTo(100, 100);
+       canvas1.lineTo(190, 100);
+       canvas1.lineTo(250,20);
+       canvas1.lineTo(300,100);
+       canvas1.lineTo(390,100);
+       canvas1.lineTo(320,180);
+       canvas1.lineTo(380,240);
+       
+       
+    
+       canvas1.stroke();
+
+    </script>
+
+</body>
+</html>

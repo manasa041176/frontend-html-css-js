@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discount Popup</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f5f6fa;
+    }
+
+    
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(14, 14, 14, 0.4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      visibility: hidden;
+    }
+
+    .overlay.active {
+      visibility: visible;
+    }
+
+    
+    .popup {
+      background: #e8e8f2;
+      width: 400px;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    
+    .popup .close-btn {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      font-size: 20px;
+      cursor: pointer;
+      color: #130554;
+    }
+
+    .popup h2 {
+      margin: 0;
+      font-size: 28px;
+      color: #2f2f5e;
+    }
+
+    .popup p {
+      color: #030258;
+      margin-bottom: 20px;
+    }
+
+    .input-group {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .input-group input {
+      padding: 12px;
+      flex: 1;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    .input-group button {
+      padding: 12px 20px;
+      background: #2f2f5e;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .input-group button:hover {
+      background: #44447a;
+    }
+  </style>
+</head>
+<body>
+
+  
+  <div class="overlay" id="popupOverlay">
+    <div class="popup">
+      <span class="close-btn" onclick="closePopup()">×</span>
+      <p>Check out now & receive</p>
+      <h2>10% OFF</h2>
+      <p>your first order</p>
+
+      <div class="input-group">
+        <input type="email" placeholder="Your email address">
+        <button>Get my 10% off!</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    
+    window.onload = function() {
+      setTimeout(() => {
+        document.getElementById("popupOverlay").classList.add("active");
+      }, 1000);
+    };
+
+    
+    function closePopup() {
+      document.getElementById("popupOverlay").classList.remove("active");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            padding: 4%;
+        }
+        img{
+            width: 100px;
+            display: block;
+            cursor: pointer;
+            transition: 5s;
+        }
+        img:hover{
+            transform: scale(1.1) translateX(500px);
+        }
+        img:nth-child(1){
+            transition-timing-function: linear;
+        }
+        img:nth-child(2){
+            transition-timing-function: ease-in;
+        }
+        img:nth-child(3){
+            transition-timing-function: ease-out;
+        }
+
+        img:nth-child(4){
+            transition-timing-function: ease;
+        }
+        img:nth-child(5){
+            transition-timing-function: ease-in-out;
+        }
+
+        img:nth-child(6){
+            transition-timing-function: steps(10, jump-start);
+        }
+
+        img:nth-child(6){
+            transition-timing-function:cubic-bezier(0.1, 0.9, 0.4, 1.1);;
+        }
+    </style>
+</head>
+<body>
+   <!-- <section class="container">
+    <div class="b1">
+        <h3>Example for Linear</h3>
+    </div>
+    <div class="b2">
+        <h3>Example for Ease-in</h3>
+    </div>
+    <div class="b3">
+        <h3>Example for Ease-out</h3>
+    </div>
+    <div class="b4">
+        <h3>Example for Ease</h3>
+    </div>
+    <div class="b5">
+        <h3>Example for Ease-in-out</h3>
+    </div>
+    <div class="b6">
+        <h3>Example for Steps</h3>
+    </div>
+    <div class="b7">
+        <h3>Example for  cubic-bazier</h3>
+    </div>
+   </section> -->
+
+
+
+   <section class="container">
+    <img src="https://file.aiquickdraw.com/imgcompressed/img/compressed_1eb2261474c61f82d8e7601cf9ab448d.webp" alt="hello">
+    <img src="https://file.aiquickdraw.com/imgcompressed/img/compressed_1eb2261474c61f82d8e7601cf9ab448d.webp" alt="hello">
+    <img src="https://file.aiquickdraw.com/imgcompressed/img/compressed_1eb2261474c61f82d8e7601cf9ab448d.webp" alt="hello">
+    <img src="https://file.aiquickdraw.com/imgcompressed/img/compressed_1eb2261474c61f82d8e7601cf9ab448d.webp" alt="hello">
+    <img src="https://file.aiquickdraw.com/imgcompressed/img/compressed_1eb2261474c61f82d8e7601cf9ab448d.webp" alt="hello">
+    <img src="https://file.aiquickdraw.com/imgcompressed/img/compressed_1eb2261474c61f82d8e7601cf9ab448d.webp" alt="hello">
+    <img src="https://file.aiquickdraw.com/imgcompressed/img/compressed_1eb2261474c61f82d8e7601cf9ab448d.webp" alt="hello">
+   </section>
+</body>
+</html>

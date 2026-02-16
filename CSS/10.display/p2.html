@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container1, .container2{
+            padding: 20px;
+            background-color: #0c0c0c;
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+        }
+        .container1 div, .container2 div{
+            width: 200px;
+            height: 200px;
+            font-size: 1.6rem;
+            background-color: lightcoral;
+            
+        }
+
+        .d_card1{
+            display: none;
+        }
+        .v_card1{
+            visibility: hidden;
+        }
+
+        .d_card3{
+            display: none;
+        }
+        .v_card3{
+            visibility: hidden;
+        }
+
+        .d_card2{
+            display: block; 
+        }
+        .v_card2{
+            visibility: visible; 
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Display and Visibility</h1>
+    </center>
+    <hr>
+    <section class="container1">
+        <div class="d_card1">
+            <h1>1</h1>
+        </div>
+        <div class="d_card2">
+            <h1>2</h1>
+        </div>
+        <div class="d_card3">
+            <h1>3</h1>
+        </div>
+        <div class="d_card4">
+            <h1>4</h1>
+        </div>
+        <div class="d_card5">
+            <h1>5</h1>
+        </div>
+    </section>
+
+     <section class="container2">
+        <div class="v_card1">
+            <h1>1</h1>
+        </div>
+        <div class="v_card2">
+            <h1>2</h1>
+        </div>
+        <div class="v_card3">
+            <h1>3</h1>
+        </div>
+        <div class="v_card4">
+            <h1>4</h1>
+        </div>
+        <div class="v_card5">
+            <h1>5</h1>
+        </div>
+    </section>
+</body>
+</html>

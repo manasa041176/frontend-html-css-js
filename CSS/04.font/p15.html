@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            padding: 30px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container div{
+            width: 400px;
+            padding: 20px;
+            background-color: rgb(255, 255, 255);
+            margin: auto;
+            margin-bottom: 20px;
+
+        }
+
+        .card1{
+            border: 15px solid orange;
+            border-image: linear-gradient(45deg, orange, deepskyblue, green) 50; 
+        }
+        .card2{
+              border: 15px solid orange;
+            border-image: repeating-linear-gradient(30deg, orange 1%, deepskyblue 5%, green 5%) 60; 
+        }
+        .card3{
+              border: 15px solid red;
+            /* border-image: url('https://img.pikbest.com/origin/08/95/84/26EpIkbEsTUby.jpg!sw800') 30 round stretch; */
+            border-image-width: 15px;
+            border-image: url(https://img.pikbest.com/origin/08/95/84/26EpIkbEsTUby.jpg!sw800) 30;
+            /* border-image-slice: fill; */
+            border-image-repeat: round stretch;
+            /* border-image-outset: 30; */
+        }
+      
+
+
+
+
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Border-image</h1>
+    </center>
+    <hr>
+
+    <div class="container">
+        <div class="card1">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto ipsum sunt, suscipit dolores voluptate doloremque? Ea perferendis maiores, illo quidem, sequi quia excepturi autem ducimus magnam provident aliquid? Possimus, voluptate!
+        </div>
+
+         <div class="card2">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto ipsum sunt, suscipit dolores voluptate doloremque? Ea perferendis maiores, illo quidem, sequi quia excepturi autem ducimus magnam provident aliquid? Possimus, voluptate!
+        </div>
+
+         <div class="card3">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto ipsum sunt, suscipit dolores voluptate doloremque? Ea perferendis maiores, illo quidem, sequi quia excepturi autem ducimus magnam provident aliquid? Possimus, voluptate!
+        </div>
+
+    </div>
+</body>
+</html>

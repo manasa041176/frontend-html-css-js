@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            padding: 10px 20px;
+            margin-left: 10px;
+            border-radius: 10px;
+            border: none;
+            background-color: lightsalmon;
+        }
+    </style>
+</head>
+<body>
+     <h2>1) Literal Array => single array</h2>
+            <p>we can create any array using 3 ways</p>
+            <ol>
+                <li>Literal using []</li>
+                <li>Creating array using constructor using Array Constructor with new keyword </li>
+                <li>Creating array using constructor with parameter using Array Constructor with new keyword with parameter </li>
+            </ol>
+
+       
+            <h2 style="color: white; background-color: #000; padding: 10px;">Literal array creating using literal way using []</h2>
+            <hr>
+            <script>
+                var fruits = ["Apple", "Banana", "Cherry", "Dragon fruit", "Egg Plant" ]; //literal array using []
+                console.log("fruits = ", fruits);
+                document.write(`<h2>fruits = ${fruits}</h2>`)
+                document.write(`<h2>fruits length = ${fruits.length}</h2>`)
+                document.write(`<h2>fruits datatype = ${typeof fruits}</h2>`)
+                
+                //getting values mannual way
+                document.write(`<h2>fruits 0 index value = ${fruits[0]}</h2>`);//apple
+                document.write(`<h2>fruits 1 index value = ${fruits[1]}</h2>`)//Banana
+                document.write(`<h2>fruits 2 index value = ${fruits[2]}</h2>`)//Cherry
+                document.write(`<h2>fruits 3 index value = ${fruits[3]}</h2>`);//Dragon Fruit
+                document.write(`<h2>fruits 4 index value = ${fruits[4]}</h2>`);//Egg Plant
+                document.write(`<h2>fruits 5 index value = ${fruits[5]}</h2>`);//undefined
+
+
+
+                //getting value using loops
+                for(var i=0; i<fruits.length; i++){
+                    //if satisfied
+                    console.log(i);
+                    console.log(fruits[i]);
+                document.write(`<h2 style="color:red">fruits ${i} index value = ${fruits[i]}</h2>`);
+
+                }
+
+                for(let item of fruits){
+                    console.log("from for of = ", item);
+                document.write(`<h2 style="color:green"> value = ${item}</h2>`);
+
+                }
+
+                for(let index in fruits){
+                document.write(`<h2 style="color:green">index value = ${index} and value  = ${fruits[index]}</h2>`);
+                }
+                
+
+
+            </script>
+
+
+            <h2  style="color: white; background-color: #000; padding: 10px;">Creating array using constructor using Array Constructor with new keyword </h2>
+            <script>
+                // var usernames = ["Arun", "Kiran", "tharun", "varun"]
+                var usernames = new Array(); //constructor method
+                console.log("usernames = ", usernames);
+                document.write(`<h2>usernames = ${usernames}</h2>`)
+                document.write(`<h2>usernames length = ${usernames.length}</h2>`)
+                document.write(`<h2>usernames datatype = ${typeof usernames}</h2>`)
+
+                //assaigning values
+                usernames[0] = "Arun";
+                usernames[1] = "Kiran";
+                usernames[3] = "varun";
+
+                 console.log("usernames = ", usernames);
+                document.write(`<h2>usernames = ${usernames}</h2>`)
+                document.write(`<h2>usernames length = ${usernames.length}</h2>`)
+                document.write(`<h2>usernames datatype = ${typeof usernames}</h2>`)
+
+
+
+                //getting values
+                document.write(`<h2>usernames 0 index value = ${usernames[0]}</h2>`);//apple
+                document.write(`<h2>usernames 1 index value = ${usernames[1]}</h2>`)//Banana
+                document.write(`<h2>usernames 2 index value = ${usernames[2]}</h2>`)//Cherry
+                document.write(`<h2>usernames 3 index value = ${usernames[3]}</h2>`);//Dragon Fruit
+            </script>
+
+            <hr>
+
+
+            <h2  style="color: white; background-color: #000; padding: 10px;">Creating array using constructor with parameter using Array Constructor with new keyword with parameter</h2>
+            <hr>
+            <script>
+                // var books = ["Rich Dad", "It Starts wit us", "Its End with us", "They hate with us", "Naku thanthi", "Sri ramayana Darshanam"]
+
+                var books = new Array("Rich Dad", "It Starts wit us", "Its End with us", "They hate with us", "Naku thanthi", "Sri ramayana Darshanam");
+                console.log("books = ", books);
+                document.write(`<h2>books = ${books}</h2>`)
+                document.write(`<h2>books length = ${books.length}</h2>`)
+                document.write(`<h2>books datatype = ${typeof books}</h2>`)
+
+
+                for(let book of books){
+                    document.write(`<button>${book}</button>`)
+                }
+
+
+            </script>
+</body>
+</html>

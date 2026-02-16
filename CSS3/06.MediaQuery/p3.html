@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+            padding: 0;
+            width: 100%;
+            margin: auto;
+        }
+
+        .container{
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+        }
+
+        .card{
+            text-align: justify;
+            margin: 1rem;
+            box-shadow: 5px 20px 40px rgb(0,0,0,1);
+            padding: 20px;
+        }
+
+        @media  screen and (max-width:768) {
+            .container{
+                flex-direction: column;
+            }
+            .card{
+                background-color: aqua;
+            }
+        }
+        @media (min-width:769) and (max-width:1440px){
+            .container{
+                flex-direction: column;
+                flex-wrap: wrap;
+            }
+
+            .card{
+                background-color: blue;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1>media query</h1>
+
+    <section class="container">
+        <div class="card">
+            <div class="title">
+                <h4>product-1</h4>
+            </div>
+            <div class="content">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda aspernatur tenetur quis ducimus, non est in ab nobis temporibus voluptatem accusantium aliquam, facilis quidem nam saepe illum praesentium dolores! Numquam.</p>
+            </div>
+        </div>
+        
+
+         <div class="card">
+            <div class="title">
+                <h4>product-1</h4>
+            </div>
+            <div class="content">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda aspernatur tenetur quis ducimus, non est in ab nobis temporibus voluptatem accusantium aliquam, facilis quidem nam saepe illum praesentium dolores! Numquam.</p>
+            </div>
+        </div>
+
+        
+          <div class="card">
+            <div class="title">
+                <h4>product-1</h4>
+            </div>
+            <div class="content">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda aspernatur tenetur quis ducimus, non est in ab nobis temporibus voluptatem accusantium aliquam, facilis quidem nam saepe illum praesentium dolores! Numquam.</p>
+            </div>
+        </div>
+
+
+          <div class="card">
+            <div class="title">
+                <h4>product-1</h4>
+            </div>
+            <div class="content">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda aspernatur tenetur quis ducimus, non est in ab nobis temporibus voluptatem accusantium aliquam, facilis quidem nam saepe illum praesentium dolores! Numquam.</p>
+            </div>
+        </div>
+
+
+
+    </section>
+</body>
+</html>

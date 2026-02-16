@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MBP Logo</title>
+  <style>
+    body {
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    canvas {
+      border-radius: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <canvas id="logo" width="400" height="200"></canvas>
+
+  <script>
+    const canvas = document.getElementById('logo');
+    const ctx = canvas.getContext('2d');
+
+    // Create gradient background
+    const gradient = ctx.createLinearGradient(0, 0, 400, 200);
+    gradient.addColorStop(0, '#ff416c');
+    gradient.addColorStop(1, '#ff4b2b');
+    ctx.fillStyle = gradient;
+    ctx.fillRect(0, 0, 400, 200);
+
+    // Add shadow for depth
+    ctx.shadowColor = 'rgba(0,0,0,0.4)';
+    ctx.shadowBlur = 10;
+    ctx.shadowOffsetX = 4;
+    ctx.shadowOffsetY = 4;
+
+    // Draw “MBP” text
+    ctx.font = 'bold 90px Arial';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillStyle = 'white';
+    ctx.fillText('MBP', 200, 100);
+
+    // Add outline around letters
+    ctx.lineWidth = 2;
+    ctx.strokeStyle = 'black';
+    ctx.strokeText('MBP', 200, 100);
+  </script>
+</body>
+</html>
+

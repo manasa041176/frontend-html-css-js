@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .folder{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border-bottom: 1px solid gray;
+            cursor: pointer;
+        }
+
+        .folder:hover{
+            background-color: rgb(231, 231, 231);
+            
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Object array => array of objects</h1>
+    </center>
+    <hr>
+
+   <p>const array =  [{}, {}, {}]</p>
+
+   <script>
+    //object
+    // the object is key and value pairs  and both key and value pairt we gonna call one property var laptap
+    //properties can seperated by , comma
+
+        var laptap = {
+            model:"Thinkpad",//key:value => property
+            color:"black",
+            price:100000,
+            discount:30,
+            manufacturedDate:1256,
+            isRepaired:false,
+            folders:["Frontend", "Backned", "Picturs", "Videos", "Downloads", "Documents", "Screenshots"],
+            screen:{
+                display:"14.5inch",
+                screenToutch:false
+            }
+        }
+
+
+        console.log(laptap);
+
+        document.write(`<h1>laptap = ${laptap}</h1>`)
+        
+    //to access the propety values from the object
+    //formula: object_name.any_key_name
+        document.write(`<h1>laptap model = ${laptap.model}</h1>`)
+        document.write(`<h1>laptap color = ${laptap.color}</h1>`)
+        document.write(`<h1>laptap price = &#8377; ${laptap.price}/-</h1>`)
+        document.write(`<h1>laptap discount = ${laptap.discount}%</h1>`)
+        document.write(`<h1>laptap manufacturedDate = ${laptap.manufacturedDate}</h1>`)
+        if(laptap.isRepaired==true){
+            document.write(`<h1>laptap is not in working condition</h1>`)
+        }else{
+            document.write(`<h1>laptap is  in working condition</h1>`)
+        }
+
+        for(let item of laptap.folders){
+            console.log(item);
+            document.write(`
+            <div class="folder">
+                <img src="https://www.iconpacks.net/icons/2/free-folder-icon-1484-thumb.png" width="50">
+                <h2>${item}</h2>
+                </div>`)
+            
+        }
+
+        document.write(`<h1>laptap screen display width = ${laptap.screen.display}</h1>`)
+
+        
+
+
+   </script>
+</body>
+</html>

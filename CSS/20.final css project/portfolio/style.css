@@ -1,0 +1,217 @@
+:root{
+    --lightgray:#ecf3f1;
+    --green:#448c74;
+    --white:#fff;
+    --black:#0c0c0c;
+    --btn-radius:7px;
+}
+body{
+    background-color: var(--lightgray);
+    padding: 0px 8%;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+header{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--black);
+}
+header ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+header .logo{
+    font-size: 1.6rem;
+}
+header ul li a{
+    text-decoration: none;
+    color: var(--black);
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: 0.5s;
+}
+.main-outline-btn, .main-solid-btn{
+    border: 1.5px solid var(--black);
+    padding: 8px 20px;
+    border-radius: var(--btn-radius);
+    background-color: transparent;
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.5s;
+    text-decoration: none;
+    display: block;
+    width: fit-content;
+}
+.main-outline-btn:hover, .main-solid-btn{
+    background-color: var(--green);
+    border: 1.5px solid transparent;
+    color: white;
+}
+header ul li a:hover{
+    color: var(--green);
+}
+.s{
+    display: flex !important;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    color: rgb(105, 105, 105);
+}
+
+.dot{
+    width: 10px;
+    height: 10px;
+    background-color: var(--green);
+    border-radius: 100px;
+}
+
+.about{
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 20px;
+}
+.right{
+    flex: 1;
+}
+.hero{
+    padding: 20px 0px;
+    display: flex;
+    gap: 20px;
+}
+.about .heading{
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.outline-text{
+    color: transparent;
+    -webkit-text-stroke: 1px var(--green);
+}
+
+.profile{
+    background-color: white;
+    text-align: center;
+    width: 300px;
+    padding: 30px;
+    border-radius: 30px;
+}
+.profile img{
+    width: 200px;
+    border: 3px dashed var(--green);
+    border-radius: 100px;
+    padding: 8px;
+}
+.profile h1{
+    font-weight: 500;
+    font-size: 1.6rem;
+    margin-top: 8px;
+}
+.profile p{
+    font-size: 0.9rem;
+    color: rgb(78, 78, 78);
+    margin-top: 10px;
+}
+
+.social-links{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.social-links a{
+    display: block;
+    padding: 8px;
+    font-size: 0.9rem;
+    border-radius: var(--btn-radius);
+    background-color: transparent;
+    color: var(--black);
+    border: 1.5px solid  var(--lightgray) ;
+}
+.social-links a:hover{
+    color: var(--green);
+}
+
+.scrollbar{
+    padding: 30px;
+    border-radius: 30px;    
+    background-color: white;
+    margin-top: 20px;
+}
+.scrollbar marquee h1{
+    display: flex;
+    gap: 20px;
+}
+
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #eaf3ee;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: left;
+      margin-bottom: 20px;
+    }
+
+    .skills-container {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 20px;
+    }
+
+    .skill-card {
+      background: transparent;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      border:1px solid lightgray;
+    }
+
+    .skill-card img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 10px;
+    }
+
+    .skill-name {
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .skill-percent {
+      display: inline-block;
+      padding: 6px 14px;
+      background: #4caf50;
+      color: white;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    
+    .figma { background: #4caf50; }
+    .tailwind { background: #4caf50; }
+    .photoshop { background: #4caf50; }
+    .wordpress { background:  #4caf50; }
+    .angular { background: #4caf50; }
+    .webflow { background: #4caf50; }
+  
+  .profile{
+    background-color: white;
+  }  
+  .form{
+    border: 3px solid red;
+  }

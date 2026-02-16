@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<center>
+    <canvas id="profile" width="500" height="500" style="border: 2px solid #ccc;"></canvas>
+
+</center>
+
+
+    <script>
+        var canvas1 = document.getElementById('profile').getContext('2d');
+       canvas1.moveTo(20, 200); 
+       canvas1.lineTo(200, 200);
+       canvas1.lineTo(200, 350);
+       canvas1.lineTo(20, 350);
+       canvas1.lineTo(20, 200);
+       canvas1.lineTo(80, 170);
+       canvas1.lineTo(250, 170);
+       canvas1.lineTo(200, 200);
+
+       canvas1.moveTo(250, 170);
+       canvas1.lineTo(250, 320)
+       canvas1.lineTo(200, 350);
+
+
+       canvas1.moveTo(250, 320);
+       canvas1.lineTo(80, 320)
+       canvas1.lineTo(20, 350);
+
+       canvas1.moveTo(80, 320);
+       canvas1.lineTo(80, 170)
+       canvas1.stroke()
+    </script>
+</body>
+</html>

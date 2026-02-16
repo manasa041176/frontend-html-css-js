@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section div{
+            width: 300px;
+            height: 300px;
+            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: lavenderblush;
+            border: 2px solid #0c0c0c;
+            margin: auto;
+            margin-bottom: 20px;
+            transition: 2s;
+        }
+
+        .card1:hover{
+            transform: rotate(95deg);
+            /* transform: rotate(-45deg); */
+        }
+        .card2:hover{
+            /* transform: rotateX(45deg); */
+            transform: rotateX(360deg);
+        }
+        .card3:hover{
+            /* transform: rotateY(45deg); */
+            transform: rotateY(360deg);
+            /* transform: rotateY(180deg); */
+        }
+        
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Rotate, RotateX, RotateY </h1>
+    </center>
+    <hr>
+
+   <section>
+     <div class="card1">
+        <h1>Rotate</h1>
+    </div>
+     <div class="card2">
+        <h1>RotateX</h1>
+    </div>
+     <div class="card3">
+        <h1>RotateY</h1>
+    </div>
+   </section>
+</body>
+</html>

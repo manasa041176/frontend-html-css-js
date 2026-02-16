@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>confirm window</h1>
+    <p>is used to accpet user acceptance</p>
+
+    <button onclick="handler()">Delete</button>
+
+    <script>
+        function handler() {
+            if(confirm(`Are you sure to delete a file?`)) {
+                alert("file delete success")
+            } else {
+                alert("delete error")
+            }
+        }
+    </script>
+</body>
+</html>
